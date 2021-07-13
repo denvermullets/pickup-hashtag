@@ -97,7 +97,7 @@ function streamTweets() {
   stream.on('data', (data) => {
     try {
       const json = JSON.parse(data);
-      // sendToSlack(json);
+      sendToSlack(json);
       console.log(json);
       console.log(json.includes.users)
     } catch (error) {
